@@ -1,4 +1,4 @@
-# Lab 5: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 5: Vojtěch Vídenský
 
 ### Analog-to-Digital Conversion
 
@@ -19,19 +19,8 @@ Consider an application for temperature measurement. Use analog temperature sens
 
 2. Draw a schematic of temperature meter. The image can be drawn on a computer or by hand. Always name all components and their values.
 
-   ![your figure]()
+   ![image](https://user-images.githubusercontent.com/99399676/199074447-67c3e93c-e23c-40af-b230-b719f834d2fd.png)
 
 3. Draw two flowcharts for interrupt handler `TIMER1_OVF_vect` (which overflows every 1&nbsp;sec) and `ADC_vect`. The image can be drawn on a computer or by hand. Use clear descriptions of the individual steps of the algorithms.
 
-   ![your figure]()
-
-
-    | **Operation** | **Register(s)** | **Bit(s)** | **Description** |
-   | :-- | :-: | :-: | :-- |
-   | Voltage reference    | ADMUX | REFS1:0 | 00: ..., 01: AVcc voltage reference (5V), ... |
-   | Input channel        | ADMUX | MUX3:0 | 0000: ADC0, 0001: ADC1, ... |
-   | ADC enable           | ADCSRA | ADEN | 1 |
-   | Start conversion     | ADCSRA | ADSC | 1 |
-   | ADC interrupt enable | ADCSRA | ADIE | 1 |
-   | ADC clock prescaler  | ADCSRA | ADPS2:0 | 000: Division factor 2, 001: 2, 010: 4, ...|
-   | ADC 10-bit result    | ADCL and ADCH | - | - |
+   
