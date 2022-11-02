@@ -92,13 +92,18 @@ ISR(TIMER1_OVF_vect)
 ISR(ADC_vect)
 {
     uint16_t value;
+    uint16_t volts;
     char string[4];  // String for converted numbers by itoa()
 
     // Read converted value
     // Note that, register pair ADCH and ADCL can be read as a 16-bit value ADC
     value = ADC;
     // Convert "value" to "string" and display it
-    itoa(value, string, 10);
+    //itoa(value, volts, 10);
+    volts = (uint16_t)(((float)(value*5000))/1023.0);
+
+    itoa(volts, string, 10);
+    //itoa(value, string, 10);
     lcd_gotoxy(8, 0);
     lcd_puts("    ");
     lcd_gotoxy(8, 0);
